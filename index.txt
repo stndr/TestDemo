@@ -1,0 +1,30 @@
+3.2 Git Branching - Basic Branching and Merging
+Basic Branching and Merging
+
+Let’s go through a simple example of branching and merging with a workflow that you might use in the real world. You’ll follow these steps:
+
+    Do work on a web site.
+    Create a branch for a new story you’re working on.
+    Do some work in that branch.
+
+At this stage, you’ll receive a call that another issue is critical and you need a hotfix. You’ll do the following:
+
+    Revert back to your production branch.
+    Create a branch to add the hotfix.
+    After it’s tested, merge the hotfix branch, and push to production.
+    Switch back to your original story and continue working.
+   
+
+
+        $ git pull origin master
+    remote: Counting objects: 12, done.
+    remote: Compressing objects: 100% (4/4), done.
+    remote: Total 8 (delta 4), reused 7 (delta 3)
+    Unpacking objects: 100% (8/8), done.
+    From xxx.com:xxx/xxx
+     * branch            master     -> FETCH_HEAD
+    Updating e0ef362..6402a2e
+    Fast-forward
+     public/javascript/xxx.js |    5 ++---
+     1 files changed, 2 insertions(+), 3 deletions(-)
+     create mode 100644 README
